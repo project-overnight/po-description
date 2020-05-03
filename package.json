@@ -9,7 +9,7 @@
   "scripts": {
     "node-dev": "nodemon ./server/index.js --ignore dist/ --ignore src/",
     "react-dev": "webpack --watch --d",
-    "delint": "eslint --fix src/** database/** server/**",
+    "delint": "eslint src/** database/** server/**",
     "seed": "node database/seedDB.js"
   },
   "dependencies": {
