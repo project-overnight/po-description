@@ -24,9 +24,3 @@ db.once('open', () => {
       });
     });
 });
-
-
-// Promise.all(promises)
-//   .then((result) => {
-//     console.log('db loaded', result);
-//   });
