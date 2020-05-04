@@ -63,6 +63,9 @@ const generateData = (entries) => {
       description += fakeText[first];
       description += fakeText[second];
     }
+    // this generates an appropriate number of beds and baths,
+    // as well as a extrasNumber that will be used later
+    // to generate the list of ammenities.
     switch (true) {
       case size < 2:
         beds = Math.ceil(Math.random() * 2);
@@ -94,14 +97,27 @@ const generateData = (entries) => {
       default:
         break;
     }
+    /*
+    *     "BASICS"
+    * I created this section because there are a list of basic
+    * amenities, across multiple catagories, that if /not/ included
+    * will be show up as being missing from the listing.
+    * If they are included, they show up under an appropriate
+    * catagory heading, but if they aren't they show up under,
+    * "not included".
+    * Because this is static, I create a fixed length boolean array
+    * to represent the basic amenities
+    */
 
-
+    // this function creates a boolean array of basics,
+    // it biases more basics to larger home sizes.
+    // this array will be sent to the client.
     const basics = [];
     for (let j = 0; j < 13; j += 1) {
       const coinFlip = Math.random() + (size / 30) > 0.5 ? 1 : 0;
       basics.push(!!coinFlip);
     }
-
+    // this generates an array of true indexes from basics
     const indexes = basics.map(
       (bool, index) => (bool ? index : 0),
     ).filter(
@@ -109,7 +125,9 @@ const generateData = (entries) => {
     );
 
     const amenities = new Map();
-
+    // this adds the 'basics' amenities to the ammenities map,
+    // using the list of indexes generated above
+    // more amenities, will be added later.
     indexes.forEach((basicsIndex) => {
       switch (basicsIndex) {
         case 0: {
@@ -208,6 +226,7 @@ const generateData = (entries) => {
         }
       }
     });
+
     const extras = new Set();
     for (let j = 0; j < extrasNumber; j += 1) {
       const extra = Math.ceil(Math.random() * 34);
