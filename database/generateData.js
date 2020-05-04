@@ -66,19 +66,19 @@ const generateData = (entries) => {
     switch (true) {
       case size < 2:
         beds = Math.ceil(Math.random() * 2);
-        baths = Math.random > 0.5 ? 1 : 0;
+        baths = Math.random() > 0.5 ? 1 : 0;
         extrasNumber = Math.ceil(Math.random() * 2) * size * 3;
         break;
       case size < 5:
         bedrooms = Math.ceil(Math.random() * 2);
         beds = bedrooms + Math.ceil(Math.random() * 2);
-        baths = Math.random > 0.5 ? 2 : 1;
+        baths = Math.random() > 0.5 ? 2 : 1;
         extrasNumber = Math.ceil(Math.random() * 2) * size * 3;
         break;
       case size < 8:
         bedrooms = Math.floor(Math.random() * 2) + 2;
         beds = bedrooms + Math.floor(Math.random() * bedrooms);
-        baths = Math.random > 0.5
+        baths = Math.random() > 0.5
           ? Math.ceil(Math.random() * bedrooms) + bedrooms
           : Math.ceil(Math.random() * bedrooms);
         extrasNumber = Math.ceil(Math.random() * 2) * size * 4;
@@ -86,7 +86,7 @@ const generateData = (entries) => {
       case size < 10:
         bedrooms = Math.floor(Math.random() * 4) + 4;
         beds = bedrooms + Math.floor(Math.random() * bedrooms);
-        baths = Math.random > 0.5
+        baths = Math.random() > 0.5
           ? Math.ceil(Math.random() * 2 * bedrooms) + bedrooms
           : Math.ceil(Math.random() * bedrooms) + bedrooms;
         extrasNumber = Math.ceil(Math.random() * 2) * size * 5;
