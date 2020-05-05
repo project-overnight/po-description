@@ -11,7 +11,6 @@ function Description() {
     fetch('/api/description/1')
       .then((res) => res.json())
       .then((res) => {
-        console.log(res);
         setListing(JSON.stringify(res));
       });
   }, [listing]);
