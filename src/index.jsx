@@ -1,18 +1,40 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+
 import ReactDOM from 'react-dom';
 
 
-function tick() {
-  const element = (
+function Description() {
+  const [listing, setListing] = useState();
+  const [date, setDate] = useState(new Date());
+
+  useEffect(() => {
+    fetch('/api/description/1')
+      .then((res) => res.json())
+      .then((res) => {
+        console.log(res);
+        setListing(JSON.stringify(res));
+      });
+  }, [listing]);
+
+  useEffect(() => {
+    setInterval(() => setDate(new Date()), 1000);
+  });
+  return (
     <>
       <h1>Hello, world!</h1>
       <h2>
-        {new Date().toLocaleTimeString()}
+        It is
+        {date.toLocaleTimeString()}
+        .
       </h2>
+      <p>{listing}</p>
     </>
   );
-  ReactDOM.render(element, document.getElementById('root'));
 }
+// make get request on ComponentDidMOunt
+// render to to page as play
 
 
-setInterval(tick, 1000);
+ReactDOM.render(<Description />, document.getElementById('root'));
+
+export default Description;

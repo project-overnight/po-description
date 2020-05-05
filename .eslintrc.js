@@ -3,10 +3,14 @@ module.exports = {
     browser: true,
     es6: true,
     node: true,
+    jest/globals: true,
   },
   extends: [
     'airbnb',
+    'airbnb/hooks',
     'plugin:react/recommended',
+    'plugin:jest/recommended',
+    'plugin:jest/style',
   ],
   globals: {
     Atomics: 'readonly',
@@ -21,6 +25,7 @@ module.exports = {
   },
   plugins: [
     'react',
+    'jest'
   ],
   rules: {
   },

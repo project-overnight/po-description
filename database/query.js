@@ -9,6 +9,6 @@ const db = mongoose.connection;
 db.on('err', console.error.bind(console, 'connection error:'));
 // eslint-disable-next-line no-console
 db.once('open', () => console.log('Database connected...'));
-const query = (id) => PlaceDetail.find({ id });
+const query = (id) => PlaceDetail.findOne({ id });
 
 module.exports = { query };
