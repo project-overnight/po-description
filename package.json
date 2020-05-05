@@ -14,10 +14,12 @@
     "test": "jest"
   },
   "dependencies": {
+    "core-js": "^3.6.5",
     "express": "^4.17.1",
     "mongoose": "^5.9.11",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "regenerator-runtime": "^0.13.5",
     "webpack": "^4.43.0"
   },
   "devDependencies": {
