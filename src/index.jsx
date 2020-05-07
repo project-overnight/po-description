@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* eslint-disable no-unused-vars */
 import ReactDOM from 'react-dom';
 import React, { useState, useEffect } from 'react';
@@ -78,7 +79,11 @@ function Description() {
     </>
   );
 }
+=======
+import React from 'react';
+import ReactDOM from 'react-dom';
+// eslint-disable-next-line import/extensions
+import Description from './modules/description.jsx';
+>>>>>>> have a test passing, in the process of writing more.
 
 ReactDOM.render(<Description />, document.getElementById('root'));
-
-export default Description;

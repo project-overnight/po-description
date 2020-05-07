@@ -28,7 +28,12 @@
     "@babel/preset-react": "^7.9.4",
     "babel-jest": "^26.0.0",
     "babel-loader": "^8.1.0",
+<<<<<<< HEAD
     "css-loader": "^3.5.3",
+=======
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+>>>>>>> have a test passing, in the process of writing more.
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.1.0",
     "eslint-loader": "^4.0.2",
@@ -38,6 +43,7 @@
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^2.5.1",
     "jest": "^26.0.0",
+    "jest-enzyme": "^7.1.2",
     "nodemon": "^2.0.3",
     "style-loader": "^1.2.1",
     "webpack": "^4.43.0",
