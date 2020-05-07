@@ -3,7 +3,7 @@ const path = require('path');
 const { query } = require('../database/query.js');
 
 const app = express();
-const PORT = 6009;
+const PORT = 9006;
 
 
 app.use('/', express.static('./dist'));
