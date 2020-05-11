@@ -28,7 +28,7 @@ function carouselReducer(state, action) {
       return state;
   }
 }
-function useCarousel(length) {
+function useRoomCarousel(length) {
   const [state, dispatch] = useReducer(carouselReducer, initialCarouselState);
 
   useEffect(() => {
@@ -51,4 +51,4 @@ function useCarousel(length) {
   }
   return [state.active, (e) => dispatch({ type: e, length }), reactStyle];
 }
-export default useCarousel;
+export default useRoomCarousel;

@@ -21,12 +21,12 @@
 .carouselMaskDivStyle{
   overflow: hidden;
 }
+
+
 .roomCarousel{
   overflow: hidden;
   display: flex;
-  align-items: center;
   z-index: 4;
-  list-style: none;
 }
 
 .roomCard {

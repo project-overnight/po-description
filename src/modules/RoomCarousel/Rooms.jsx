@@ -5,7 +5,7 @@
 /* eslint-disable react/prop-types */
 
 import React from 'react';
-import roomCarousel from './roomCarousel2';
+import roomCarousel from './useRoomCarousel';
 import styles from './RoomCarousel.css';
 
 
