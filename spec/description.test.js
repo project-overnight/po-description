@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Enzyme, { shallow, mount, render } from 'enzyme';
-import Description from '../src/modules/description';
+import Description from '../src/modules/description/description';
 
 // Enzyme.configure({ adapter: new Adapter(Description) });
 
