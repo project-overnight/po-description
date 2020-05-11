@@ -128,7 +128,7 @@ function Description() {
         ...lTextStyle,
         transition: 'opacity 350ms, transform 150ms',
       });
-      setTimeout(setLTextStyle({ opacity: '0.0' }), '150ms');
+      setTimeout(setLTextStyle({ opacity: '0.0', display: 'none' }), '150ms');
 
       setTimeout(
         setLDivStyle({ ...lDivStyle, height: '0px' }),
@@ -165,65 +165,67 @@ function Description() {
   return (
     <>
       <div className={styles.descriptionDiv}>
-        <h1 className={styles.title}>{title}</h1>
-        <h2>
-          {`It is ${date.toLocaleTimeString()}.`}
-        </h2>
-        <div className={styles.titleCardComponent}>
-          <div className={styles.titleCallout}>
-            {`Entire ${title} hosted by ${host}.`}
+        <div className={styles.descriptionWidthDiv}>
+          <h1 className={styles.title}>{title}</h1>
+          <h2>
+            {`It is ${date.toLocaleTimeString()}.`}
+          </h2>
+          <div className={styles.titleCardComponent}>
+            <div className={styles.titleCallout}>
+              {`Entire ${title} hosted by ${host}.`}
+            </div>
+            <div className={styles.titleBullets}>
+              {`${maxGuests} guests · ${bedrooms} bedrooms · ${beds} beds  · ${baths} baths`}
+            </div>
           </div>
-          <div className={styles.titleBullets}>
-            {`${maxGuests} guests · ${bedrooms} bedrooms · ${beds} beds  · ${baths} baths`}
+          <div className={styles.descriptionText}>
+            <div style={sDivStyle}>
+              <span
+                style={sTextStyle}
+                className={styles.descriptionTextSmall}
+              >
+                {sizedDescription}
+              </span>
+              <span
+                style={sButtonStyle}
+                className={styles.hideButton}
+                role="button"
+                tabIndex={0}
+                onClick={(e) => toggleFull(e)}
+                onKeyDown={(e) => logKey(e)}
+              >
+                Read more about this space ∨
+              </span>
+            </div>
+            <div style={lDivStyle}>
+              <span className={styles.descriptionTextLarge} style={lTextStyle}>
+                {description}
+              </span>
+              <span
+                style={lButtonStyle}
+                className={styles.hideButton}
+                role="button"
+                tabIndex={0}
+                onClick={(e) => toggleFull(e)}
+                onKeyDown={(e) => logKey(e)}
+              >
+                Hide ^
+              </span>
+            </div>
           </div>
-        </div>
-        <div className={styles.descriptionText}>
-          <div style={sDivStyle}>
+          <div>
             <span
-              style={sTextStyle}
-              className={styles.descriptionTextSmall}
+              href={`mailto:${email}`}
+              className={styles.contactHostEmail}
             >
-              {sizedDescription}
-            </span>
-            <span
-              style={sButtonStyle}
-              className={styles.hideButton}
-              role="button"
-              tabIndex={0}
-              onClick={(e) => toggleFull(e)}
-              onKeyDown={(e) => logKey(e)}
-            >
-              Read more about this space ∨
+              Contact Host
             </span>
           </div>
-          <div style={lDivStyle}>
-            <span className={styles.descriptionTextLarge} style={lTextStyle}>
-              {description}
-            </span>
-            <span
-              style={lButtonStyle}
-              className={styles.hideButton}
-              role="button"
-              tabIndex={0}
-              onClick={(e) => toggleFull(e)}
-              onKeyDown={(e) => logKey(e)}
-            >
-              Hide ^
-            </span>
+          <div className={styles.bottomMarginDiv}>
+            <div className={styles.bottomMarginBorder} />
           </div>
+          <RoomCarousel arrangements={arrangements} />
         </div>
-        <div>
-          <span
-            href={`mailto:${email}`}
-            className={styles.contactHostEmail}
-          >
-            Contact Host
-          </span>
-        </div>
-        <div className={styles.bottomMarginDiv}>
-          <div className={styles.bottomMarginBorder} />
-        </div>
-        <RoomCarousel arrangements={arrangements} />
       </div>
     </>
   );

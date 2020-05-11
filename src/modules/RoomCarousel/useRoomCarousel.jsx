@@ -3,7 +3,6 @@ import { useReducer, useEffect } from 'react';
 const previous = (length, current) => (current - 1 + length) % length;
 
 const next = (length, current) => {
-  console.log(`length ${length} current ${current}`);
   return (current + 1) % length;
 };
 
@@ -16,7 +15,6 @@ const initialCarouselState = {
 
 
 function carouselReducer(state, action) {
-  console.log(`state offset ${state.offset}, desired ${state.desired}, active ${state.active}, action ${action.type}`);
   switch (action.type) {
     case 'next':
       return { ...state, desired: next(action.length, state.active) };

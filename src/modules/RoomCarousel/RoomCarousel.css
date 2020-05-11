@@ -1,5 +1,5 @@
 .arrangementsModule{
-  width: 58.33%;
+  width: 100%;
   align-self: flex-start;
   height: 210px;
   position: absolute;
@@ -9,13 +9,13 @@
 
 .arrangementsTitle{
   overflow-wrap: break-word !important;
-    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
-    font-size: 16px !important;
-    font-weight: 800 !important;
-    line-height: 1.375em !important;
-    color: rgb(72, 72, 72) !important;
-    margin: 0px;
-    margin-bottom: 16px !important;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 800 !important;
+  line-height: 1.375em !important;
+  color: rgb(72, 72, 72) !important;
+  margin: 0px;
+  margin-bottom: 16px !important;
 
 }
 .carouselMaskDivStyle{

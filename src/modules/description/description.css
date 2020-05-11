@@ -1,7 +1,17 @@
 .descriptionDiv {
   padding: 24px;
   max-width: 1080px;
+  padding-right: 24px;
+  padding-left: 24px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
 }
+.descriptionWidthDiv {
+  width: 42.1%;
+  position: absolute;
+}
+
 .titleCardComponent {
   box-sizing: border-box;
   display: flex;
@@ -15,7 +25,7 @@
   color: #484848;
   font-size: 16px;
   line-height: 20px ;
-  width: 58.33%;
+  width: 100%;
 
 }
 .titleCallout {
@@ -28,7 +38,7 @@
   width: 80%;
 }
 .descriptionText {
-  width: 58.33%;
+  width: 100%;
   height: inherit;
 }
 .hideButton{
@@ -63,7 +73,7 @@
   margin-top: 24px;
   margin-bottom: 24px;
   display: block;
-  width: 62.33%;
+  width: 100%;
  }
 .bottomMarginBorder {
   border-bottom-style: solid;
