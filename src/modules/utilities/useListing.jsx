@@ -11,13 +11,13 @@ function useListing() {
   const [host, setHost] = useState('');
   const [email, setEmail] = useState('');
   const [description, setDescription] = useState('');
-  const [sizedDescription, setSizedDesciption] = useState('');
+  const [sizedDescription, setSizedDescription] = useState('');
   const [arrangements, setArrangements] = useState([]);
   const [amenitiesBasics, setAmenitiesBasics] = useState([]);
   const [amenitiesExtras, setAmenitiesExtras] = useState();
 
-  const fetchListing = async () => {
-    let response = await fetch('/api/description/1');
+  const fetchListing = async (listingNumber) => {
+    let response = await fetch(`/api/description/${listingNumber}`);
     response = await response.json();
     setTitle(response.title);
     setMaxGuests(response.maxGuests);
@@ -40,11 +40,18 @@ function useListing() {
       shortenDescription += `${descriptionArray[i]} `;
     }
     shortenDescription += `${descriptionArray[30]}...`;
-    setSizedDesciption(shortenDescription);
+    setSizedDescription(shortenDescription);
   }, [description]);
 
   useEffect(() => {
-    fetchListing();
+    const params = new URLSearchParams(window.location.search);
+    const record = Number.parseInt(params.toString(), 10);
+    if (record) {
+      fetchListing(record);
+    } else {
+      fetchListing(1);
+      console.error('Try adding a ?2 after the initial /"');
+    }
   }, []);
 
   return {

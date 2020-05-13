@@ -1,12 +1,11 @@
 import React from 'react';
 import styles from './Amenities.css';
-// import { CategoryRow, AmenityRow } from './amenitiesModalRows';
 import Modal from './AmenitiesModal';
 
 const Amenities = () => (
   <>
-    <div>
-      amenities
+    <div className={styles.amentitesTitleStyling}>
+      Amenities
     </div>
     <Modal>
       {({ modal, openModal, closeModal }) => (

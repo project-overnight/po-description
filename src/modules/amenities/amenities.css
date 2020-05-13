@@ -1,3 +1,12 @@
+.amentitesTitleStyling{
+  overflow-wrap: break-word;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.375em;
+  color: rgb(72, 72, 72);
+  margin: 0px;
+  margin-bottom: 16px;
+}
 .modalCloseButton{
   display: inline-block;
   left: 0%;
