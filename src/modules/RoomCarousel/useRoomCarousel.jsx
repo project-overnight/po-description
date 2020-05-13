@@ -42,7 +42,6 @@ function useRoomCarousel(length) {
     // const direction = Math.sign(state.desired - state.active);
     const shift = (((100 * location * -1) / (length)));
     reactStyle.transition = smooth;
-    console.log(shift);
     reactStyle.transform = `translateX(${shift}%)`;
   }
   return [state.active, (e) => dispatch({ type: e, length }), reactStyle];

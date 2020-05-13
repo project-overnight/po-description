@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from './amenities.css';
+import styles from './Amenities.css';
 // import { CategoryRow, AmenityRow } from './amenitiesModalRows';
-import Modal from './amenitiesModal';
+import Modal from './AmenitiesModal';
 
 const Amenities = () => (
   <>

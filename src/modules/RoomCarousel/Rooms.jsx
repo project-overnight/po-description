@@ -5,14 +5,16 @@
 /* eslint-disable react/prop-types */
 
 import React from 'react';
-import roomCarousel from './useRoomCarousel';
+import useRoomCarousel from './useRoomCarousel';
 import MarginDiv from '../utilities/MarginDiv';
+import useListing from '../utilities/useListing';
 import styles from './RoomCarousel.css';
 
 
-const Rooms = ({ arrangements }) => {
+const Rooms = () => {
+  const { arrangements } = useListing();
   const { length } = arrangements;
-  const [active, setActive, reactStyle] = roomCarousel(length);
+  const [active, setActive, reactStyle] = useRoomCarousel(length);
   return (
     <>
       <div className={styles.arrangementsModule}>

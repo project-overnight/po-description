@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 // eslint-disable-next-line import/extensions
-import Description from './modules/description/description';
+import Listing from './Listing';
 
 
-ReactDOM.render(<Description />, document.getElementById('root'));
+ReactDOM.render(<Listing />, document.getElementById('root'));
