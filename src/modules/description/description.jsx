@@ -2,6 +2,8 @@
 import React, { useState, useEffect } from 'react';
 import styles from './description.css';
 import RoomCarousel from '../RoomCarousel/Rooms';
+import Amenities from '../amenities/amenities';
+import MarginDiv from '../utilities/MarginDiv';
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 
@@ -77,7 +79,6 @@ function Description() {
     if (e.code === 'X') {
       toggleFull(e);
     }
-    console.log(e);
   }
 
   useEffect(() => {
@@ -221,10 +222,9 @@ function Description() {
               Contact Host
             </span>
           </div>
-          <div className={styles.bottomMarginDiv}>
-            <div className={styles.bottomMarginBorder} />
-          </div>
+          <MarginDiv />
           <RoomCarousel arrangements={arrangements} />
+          <Amenities />
         </div>
       </div>
     </>

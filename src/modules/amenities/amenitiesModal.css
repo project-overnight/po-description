@@ -1,0 +1,27 @@
+.modalOverlay {
+  z-index: 2000;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  overflow-y: auto;
+  background: rgba(255, 255, 255, 0.8);
+}
+.modalStyling {
+  display: block;
+  padding: 32px !important;
+}
+
+.modalBody {
+  position: relative;
+  margin-top: 64px;
+  margin-bottom: 64px;
+  margin-left: auto;
+  margin-right: auto;
+  background: white;
+  max-width: 568px;
+  width: 90vw;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 10px 0px;
+  overflow: visible;
+}

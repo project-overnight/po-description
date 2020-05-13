@@ -1,0 +1,20 @@
+.modalCloseButton{
+  display: inline-block;
+  left: 0%;
+  color: buttontext;
+  background-color: transparent;
+  cursor: pointer;
+  border-radius: 50%;
+  border-width: 0px;
+  border-style: initial;
+  border-color: initial;
+  border-image: initial;
+  outline: 0px;
+  margin: -7px;
+  padding: 7px;
+  font-size: 20pt;
+  font-weight: 100;
+}
+.modalCloseButtonSpacingDiv {
+margin-bottom: 24px;
+}
