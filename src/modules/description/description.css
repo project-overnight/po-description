@@ -1,0 +1,83 @@
+.descriptionDiv {
+  padding: 24px;
+  max-width: 1080px;
+  padding-right: 24px;
+  padding-left: 24px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+.descriptionWidthDiv {
+  width: 42.1%;
+  position: absolute;
+}
+
+.titleCardComponent {
+  box-sizing: border-box;
+  display: flex;
+  float: none;
+  line-height: 20px;
+  position: static;
+  padding-bottom: 24px;
+  padding-top: 48px;
+  font-weight: 400;
+  flex-wrap: wrap;
+  color: #484848;
+  font-size: 16px;
+  line-height: 20px ;
+  width: 100%;
+
+}
+.titleCallout {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 26px;
+}
+.titleBullets {
+  box-sizing: border-box;
+  width: 80%;
+}
+.descriptionText {
+  width: 100%;
+  height: inherit;
+}
+.hideButton{
+  margin-top: 1em;
+  font-weight: 600;
+  width: 100%;
+  line-height: 1.65em;
+  display: block;
+  color: #008489;
+}
+.hideButton:hover{
+  text-decoration: underline;
+  cursor: pointer
+}
+.contactHostEmail{
+  margin-top: 24px;
+  composes: hideButton;
+  line-height: 1.65em;
+  text-decoration: none;
+  z-index: 4;
+}
+.descriptionTextLarge {
+  z-index: auto;
+  position: relative;
+}
+
+.descriptionTextSmall {
+  z-index: auto;
+}
+.bottomMarginDiv {
+  width: inherit;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  display: block;
+  width: 100%;
+ }
+.bottomMarginBorder {
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #EBEBEB;
+  box-sizing: border-box;
+}

@@ -1,0 +1,128 @@
+.arrangementsModule{
+  width: 100%;
+  align-self: flex-start;
+  height: 210px;
+  position: absolute;
+  box-sizing: border-box;
+  margin-bottom: 0px;
+}
+
+.arrangementsTitle{
+  overflow-wrap: break-word !important;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 800 !important;
+  line-height: 1.375em !important;
+  color: rgb(72, 72, 72) !important;
+  margin: 0px;
+  margin-bottom: 16px !important;
+
+}
+.carouselMaskDivStyle{
+  overflow: hidden;
+}
+
+
+.roomCarousel{
+  overflow: hidden;
+  display: flex;
+  z-index: 4;
+}
+
+.roomCard {
+  height: 100% !important;
+  width: 100% !important;
+  border-width: 1px !important;
+  border-style: solid !important;
+  border-color: rgb(235, 235, 235) !important;
+  border-image: initial !important;
+  border-radius: 4px !important;
+  padding: 24px !important;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.sleepingArrangementsTitle{
+  min-width: 100%;
+}
+
+
+.showButton {
+  height: 32px;
+  width: 32px;
+  display: inline-block !important;
+  cursor: pointer !important;
+  text-align: center !important;
+  line-height: 1 !important;
+  box-shadow: rgba(0, 0, 0, 0.14) 0px 1px 1px 1px !important;
+  border-radius: 50% !important;
+  border-width: 2px !important;
+  border-style: solid !important;
+  border-color: transparent !important;
+  background: rgb(255, 255, 255) !important;
+  z-index: 7;
+  box-sizing: content-box;
+  padding: 0%;
+}
+.showButton:active {
+  border-color: rgb(226, 226, 226) !important;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 0px 1px, rgba(255, 255, 255, 0.7) 0px 0px 0px 5px !important;
+  outline: none !important;
+  transition: box-shadow 0.2s ease 0s !important;
+}
+
+.showButton:focus {
+  outline: none !important;
+}
+.buttonNext {
+  composes: showButton;
+  top: 50%;
+  right: -10px;
+  position: absolute !important;
+  display: block !important;
+  transform: translateY(-50%)
+}
+.buttonPrev {
+  composes: showButton;
+  top: 50%;
+  left: -10px;
+  position: absolute !important;
+  display: block !important;
+  transform: translateY(-50%)
+}
+
+
+.hideButton {
+  display: none !important;
+}
+
+.iconStyle {
+  line-height: 24px;
+  margin-bottom: 24px;
+}
+.roomName{
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  line-height: 1.375em !important;
+  color: rgb(72, 72, 72) !important;
+  margin: 0px !important;
+}
+
+.furnitureName{
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  line-height: 1.375em !important;
+  color: rgb(72, 72, 72) !important;
+  margin: 0px !important;
+}
+.bottomMarginDiv {
+ margin-top: 24px;
+ margin-bottom: 24px;
+ display: block;
+}
+.bottomMarginBorder {
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #EBEBEB;
+  box-sizing: border-box;
+}
