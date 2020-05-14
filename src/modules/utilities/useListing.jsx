@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import 'core-js/stable';
 
 function useListing() {
   const [title, setTitle] = useState('');
