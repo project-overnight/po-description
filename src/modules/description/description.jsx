@@ -47,9 +47,11 @@ function Description() {
     e.preventDefault();
     setIsFull(!isFull);
   };
-  // doesn't work.
+
+
+  // toggles with return
   function logKey(e) {
-    if (e.code === 'X') {
+    if (e.keyCode === 13) {
       toggleFull(e);
     }
   }
@@ -59,12 +61,6 @@ function Description() {
     return () => clearInterval(tick);
   }, [date]);
 
-  // useEffect(() => {
-  //   const time = setInterval(() => setDate(new Date()), 1000);
-  //   return clearInterval(time);
-  // });
-
-  // eslint-disable-next-line prefer-const
 
   useEffect(() => {
     if (!isFull) {
