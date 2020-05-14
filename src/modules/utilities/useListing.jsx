@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import 'core-js/stable';
-import 'regenerator-runtime/runtime';
 
 function useListing() {
   const [title, setTitle] = useState('');
