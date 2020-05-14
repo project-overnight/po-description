@@ -107,7 +107,6 @@ const Description = () => {
 
   return (
     <>
-      <h1 className={styles.title}>{title}</h1>
       <div className={styles.titleCardComponent}>
         <div className={styles.titleCallout}>
           {`Entire ${title} hosted by ${host}.`}
