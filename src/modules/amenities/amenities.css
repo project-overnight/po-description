@@ -1,0 +1,29 @@
+.amentitesTitleStyling{
+  overflow-wrap: break-word;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.375em;
+  color: rgb(72, 72, 72);
+  margin: 0px;
+  margin-bottom: 16px;
+}
+.modalCloseButton{
+  display: inline-block;
+  left: 0%;
+  color: buttontext;
+  background-color: transparent;
+  cursor: pointer;
+  border-radius: 50%;
+  border-width: 0px;
+  border-style: initial;
+  border-color: initial;
+  border-image: initial;
+  outline: 0px;
+  margin: -7px;
+  padding: 7px;
+  font-size: 20pt;
+  font-weight: 100;
+}
+.modalCloseButtonSpacingDiv {
+  margin-bottom: 24px;
+}

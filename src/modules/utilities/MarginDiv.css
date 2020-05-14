@@ -1,0 +1,13 @@
+
+.bottomMarginDiv {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  display: block;
+ }
+
+ .bottomMarginBorder {
+   border-bottom-style: solid;
+   border-bottom-width: 1px;
+   border-bottom-color: #EBEBEB;
+   box-sizing: border-box;
+ }

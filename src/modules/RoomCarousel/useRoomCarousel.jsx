@@ -2,9 +2,7 @@ import { useReducer, useEffect } from 'react';
 
 const previous = (length, current) => (current - 1 + length) % length;
 
-const next = (length, current) => {
-  return (current + 1) % length;
-};
+const next = (length, current) => (current + 1) % length;
 
 const transitionTime = 500;
 const smooth = `transform ${transitionTime}ms ease`;
@@ -44,7 +42,6 @@ function useRoomCarousel(length) {
     // const direction = Math.sign(state.desired - state.active);
     const shift = (((100 * location * -1) / (length)));
     reactStyle.transition = smooth;
-    console.log(shift);
     reactStyle.transform = `translateX(${shift}%)`;
   }
   return [state.active, (e) => dispatch({ type: e, length }), reactStyle];

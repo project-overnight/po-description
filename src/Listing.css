@@ -1,0 +1,13 @@
+.listingDiv {
+  padding: 24px;
+  max-width: 1080px;
+  padding-right: 24px;
+  padding-left: 24px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+.listingWidthDiv {
+  width: 42.12%;
+  position: absolute;
+}

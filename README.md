@@ -17,8 +17,13 @@
 
 ## Usage
 
+**Curently the the
+From within the files directory
 - To seed the DB, run `npm run seed`
-- api end point is localhost:6009/api/description/:id
+- To start nodemon  run `npm run node-dev`
+- To start webpack and have it watch for changes rung `npm react-dev`
+- To start `npm run test`
+- api end point is localhost:9006/api/description/:id
 
 ## Requirements
 
