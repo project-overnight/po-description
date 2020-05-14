@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-function useListing() {
+const useListing = () => {
   const [title, setTitle] = useState('');
   const [maxGuests, setMaxGuests] = useState(0);
   const [bedrooms, setBedrooms] = useState(0);
@@ -66,6 +66,6 @@ function useListing() {
     amenitiesBasics,
     amenitiesExtras,
   };
-}
+};
 
 export default useListing;

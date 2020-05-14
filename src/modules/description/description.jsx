@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
 import styles from './Description.css';
+// import DescriptionClock from './DescriptionClock';
 import useListing from '../utilities/useListing';
 
 // eslint-disable-next-line prefer-const
@@ -27,7 +28,7 @@ const smallDivStyle = {
 };
 
 
-function Description() {
+const Description = () => {
   const [isFull, setIsFull] = useState(false);
   const [lTextStyle, setLTextStyle] = useState(largeTextStyle);
   const [sTextStyle, setSTextStyle] = useState(smallTextStyle);
@@ -43,11 +44,11 @@ function Description() {
     host, email, description, sizedDescription,
   } = useListing();
 
+
   const toggleFull = (e) => {
     e.preventDefault();
     setIsFull(!isFull);
   };
-
 
   // toggles with return
   function logKey(e) {
@@ -55,12 +56,6 @@ function Description() {
       toggleFull(e);
     }
   }
-
-  useEffect(() => {
-    const tick = setInterval(() => setDate(new Date()), 1000);
-    return () => clearInterval(tick);
-  }, [date]);
-
 
   useEffect(() => {
     if (!isFull) {
@@ -113,9 +108,6 @@ function Description() {
   return (
     <>
       <h1 className={styles.title}>{title}</h1>
-      <h2>
-        {`It is ${date.toLocaleTimeString()}.`}
-      </h2>
       <div className={styles.titleCardComponent}>
         <div className={styles.titleCallout}>
           {`Entire ${title} hosted by ${host}.`}
@@ -169,8 +161,6 @@ function Description() {
       </div>
     </>
   );
-}
-// make get request on ComponentDidMOunt
-// render to to page as play
+};
 
 export default Description;
