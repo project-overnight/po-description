@@ -1,22 +1,22 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 
-const CategoryRow = ({ category }) => (
+const CategoryRow = ({ children }) => (
   <tr>
     <th colSpan="2">
-      {category}
+      {children}
     </th>
   </tr>
 );
 
-const AmenityRow = ({ amenity, isIncluded }) => {
-  const styledAmmenity = isIncluded || undefined
-    ? amenity
-    : (
+const AmenityRow = ({ children, isIncluded }) => {
+  const styledAmmenity = isIncluded
+    ? (
       <span style={{ textDecoration: 'line-through' }}>
-        {amenity}
+        { children }
       </span>
-    );
+    )
+    : <span>{ children }</span>;
 
   return (
     <tr>
@@ -27,4 +27,4 @@ const AmenityRow = ({ amenity, isIncluded }) => {
 };
 
 
-export default { CategoryRow, AmenityRow };
+export { CategoryRow, AmenityRow };

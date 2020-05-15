@@ -1,13 +1,14 @@
 import React from 'react';
 import styles from './Amenities.css';
-import Modal from './AmenitiesModal';
+import AmenitiesModal from './AmenitiesModal';
+import SortedAmenitiesList from './SortedAmenitiesList';
 
 const Amenities = () => (
   <>
     <div className={styles.amentitesTitleStyling}>
       Amenities
     </div>
-    <Modal>
+    <AmenitiesModal>
       {({ modal, openModal, closeModal }) => (
         <>
           <button
@@ -26,13 +27,14 @@ const Amenities = () => (
                 >
                   X
                 </button>
+                <span className={styles.ammenitiesModalTitle}>Ammenities</span>
               </div>
-              <span>here </span>
+              <SortedAmenitiesList />
             </>,
           ) }
         </>
       )}
-    </Modal>
+    </AmenitiesModal>
     <div>
       bottom divider here
     </div>

@@ -6,7 +6,7 @@ import styles from './AmenitiesModal.css';
 
 
 // Modal using reactDom.portal
-class Modal extends React.Component {
+class AmenitiesModal extends React.Component {
   constructor(props) {
     super(props);
     this.state = { open: false };
@@ -93,4 +93,4 @@ class Modal extends React.Component {
   }
 }
 
-export default Modal;
+export default AmenitiesModal;
