@@ -8,18 +8,21 @@ const Amenities = () => (
     <div className={styles.amentitesTitleStyling}>
       Amenities
     </div>
+    <div>4 things go here </div>
     <AmenitiesModal>
       {({ modal, openModal, closeModal }) => (
         <>
-          <button
-            type="button"
-            onClick={openModal}
-          >
-            Show all ## Amenities
-          </button>
+          <div className={styles.amenitiesModalSpacingDiv}>
+            <button
+              type="button"
+              onClick={openModal}
+            >
+              Show all ## Amenities
+            </button>
+          </div>
           { modal(
             <>
-              <div>
+              <div className={styles.modalCloseButtonSpacingDiv}>
                 <button
                   type="button"
                   onClick={closeModal}
@@ -27,17 +30,14 @@ const Amenities = () => (
                 >
                   X
                 </button>
-                <span className={styles.ammenitiesModalTitle}>Ammenities</span>
               </div>
+              <span className={styles.ammenitiesModalTitle}>Ammenities</span>
               <SortedAmenitiesList />
             </>,
           ) }
         </>
       )}
     </AmenitiesModal>
-    <div>
-      bottom divider here
-    </div>
   </>
 );
 

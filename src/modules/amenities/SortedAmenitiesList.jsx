@@ -2,6 +2,7 @@ import React from 'react';
 import { CategoryRow, AmenityRow } from './AmenitiesModalRows';
 import useListing from '../utilities/useListing';
 import MarginDiv from '../utilities/MarginDiv';
+import styles from './AmenitiesModal.css';
 
 const SortedAmenitiesList = () => {
   const { amenitiesExtras } = useListing();
@@ -22,13 +23,14 @@ const SortedAmenitiesList = () => {
       return (
         <>
           <CategoryRow>{CategoryName}</CategoryRow>
-          <MarginDiv />
-          {sortedObject[CategoryName].map((amenity) => (
-            <>
-              <AmenityRow key={amenity}>{amenity}</AmenityRow>
-              <MarginDiv />
-            </>
-          ))}
+          <div className={styles.amenitiesRowDiv}>
+            {sortedObject[CategoryName].map((amenity, i) => (
+              <>
+                <AmenityRow key={amenity}>{amenity}</AmenityRow>
+                { i < sortedObject[CategoryName].length - 1 && <MarginDiv /> }
+              </>
+            ))}
+          </div>
         </>
       );
     }
@@ -36,23 +38,12 @@ const SortedAmenitiesList = () => {
 
   return (
     <>
-      {{}.hasOwnProperty.call(sortedObject, 'Basics') && (
-      <>
-        <CategoryRow>Basic</CategoryRow>
-        <MarginDiv />
-        {sortedObject.Basics.map((basicAmenity) => (
-          <>
-            <AmenityRow key={basicAmenity}>{basicAmenity}</AmenityRow>
-            <MarginDiv />
-          </>
-        ))}
-      </>
-      )}
+      {addCategoryAndAmenities('Basics')}
       {addCategoryAndAmenities('Facilities')}
       {addCategoryAndAmenities('Dining')}
       {addCategoryAndAmenities('Guest access')}
       {addCategoryAndAmenities('Logistics')}
-      {addCategoryAndAmenities('Bed and bath')}
+      {addCategoryAndAmenities('Bed and Bath')}
     </>
   );
 };

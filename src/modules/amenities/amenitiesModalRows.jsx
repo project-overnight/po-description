@@ -1,28 +1,27 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
+import styles from './AmenitiesModal.css';
 
 const CategoryRow = ({ children }) => (
-  <tr>
-    <th colSpan="2">
-      {children}
-    </th>
-  </tr>
+  <div className={styles.categoryRow}>
+    {children}
+  </div>
 );
 
 const AmenityRow = ({ children, isIncluded }) => {
   const styledAmmenity = isIncluded
     ? (
-      <span style={{ textDecoration: 'line-through' }}>
+      <span className={styles.amenitySpanStyle} style={{ textDecoration: 'line-through' }}>
         { children }
       </span>
     )
-    : <span>{ children }</span>;
+    : <span className={styles.amenitySpanStyle}>{ children }</span>;
 
   return (
-    <tr>
-      <td>{styledAmmenity}</td>
-      <td>{/* additional information hook */}</td>
-    </tr>
+    <div>
+      <div>{styledAmmenity}</div>
+      <div>{/* additional information hook */}</div>
+    </div>
   );
 };
 
