@@ -39,11 +39,13 @@ const SortedAmenitiesList = () => {
   return (
     <>
       {addCategoryAndAmenities('Basics')}
+      {addCategoryAndAmenities('Family features')}
       {addCategoryAndAmenities('Facilities')}
       {addCategoryAndAmenities('Dining')}
       {addCategoryAndAmenities('Guest access')}
       {addCategoryAndAmenities('Logistics')}
       {addCategoryAndAmenities('Bed and Bath')}
+      {addCategoryAndAmenities('Safety Features')}
     </>
   );
 };
