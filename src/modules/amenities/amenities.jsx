@@ -5,7 +5,7 @@ import SortedAmenitiesList from './SortedAmenitiesList';
 
 const Amenities = () => (
   <>
-    <div className={styles.amentitesTitleStyling}>
+    <div className={styles.amenititesTitleStyling}>
       Amenities
     </div>
     <div>4 things go here </div>
@@ -14,6 +14,7 @@ const Amenities = () => (
         <>
           <div className={styles.amenitiesModalSpacingDiv}>
             <button
+              className={styles.amenitiesModalOpenButton}
               type="button"
               onClick={openModal}
             >
@@ -24,12 +25,14 @@ const Amenities = () => (
             <>
               <div className={styles.modalCloseButtonSpacingDiv}>
                 <button
-                  type="button"
-                  onClick={closeModal}
                   className={styles.modalCloseButton}
+                  type="button"
+                  tabIndex={0}
+                  onClick={closeModal}
                 >
                   X
                 </button>
+
               </div>
               <span className={styles.ammenitiesModalTitle}>Ammenities</span>
               <SortedAmenitiesList />
