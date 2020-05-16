@@ -51,7 +51,7 @@ const generateData = (entries) => {
     const host = `${name} ${surname}`;
     const email = `${name}${surname}${Math.floor(Math.random() * 100)}@gmail.com`;
     let description = fakeText[Math.ceil(Math.random() * 5) + 5];
-    const maxGuests = size * Math.floor(Math.random() * 2);
+    const maxGuests = (size * Math.ceil(Math.random() * 2) + 1);
     let bedrooms = 0;
     let beds = 1;
     let baths = 0;
