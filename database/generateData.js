@@ -119,9 +119,9 @@ const generateData = (entries) => {
     }
     // this generates an array of true indexes from basics
     const indexes = basics.map(
-      (bool, index) => (bool ? index : 0),
+      (bool, index) => (bool ? index : false),
     ).filter(
-      (index) => index !== 0,
+      (index) => index !== false,
     );
 
     const amenities = new Map();
@@ -229,7 +229,7 @@ const generateData = (entries) => {
 
     const extras = new Set();
     for (let j = 0; j < extrasNumber; j += 1) {
-      const extra = Math.ceil(Math.random() * 34);
+      const extra = Math.floor(Math.random() * 34);
       extras.add(amenitiesPossibilities[extra]);
     }
     let amenitiesIndex = 13;
