@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 
+const DISPLAYED = 4;
+
 const useListing = () => {
   const [title, setTitle] = useState('');
   const [maxGuests, setMaxGuests] = useState(0);
@@ -13,11 +15,12 @@ const useListing = () => {
   const [arrangements, setArrangements] = useState([]);
   const [amenitiesBasics, setAmenitiesBasics] = useState([]);
   const [amenitiesExtras, setAmenitiesExtras] = useState(Object.create(null));
+  const [amenitiesHilites, setAmenitiesHilites] = useState();
+  const [amenitiesNumber, setAmenitiesNumber] = useState('');
 
   const fetchListing = async (listingNumber) => {
     let response = await fetch(`/api/description/${listingNumber}`);
     response = await response.json();
-    console.log(response.amenities.extras instanceof Object);
     setTitle(response.title);
     setMaxGuests(response.maxGuests);
     setBedrooms(response.bedrooms);
@@ -30,6 +33,21 @@ const useListing = () => {
     setAmenitiesBasics(response.amenities.basics);
     setAmenitiesExtras(response.amenities.extras);
   };
+
+  useEffect(() => {
+    // this HOF puts the names of all the amenities in an array.
+    const amenitiesArray = Object.values(amenitiesExtras).map((obj) => !null && obj.Amenity);
+    const amenitiesHilitesArray = [];
+    const amenitesLength = amenitiesArray.length;
+    setAmenitiesNumber(amenitesLength);
+    for (let i = 0; i < DISPLAYED; i += 1) {
+      // pick a random index
+      const indexToShow = Math.floor(Math.random() * amenitesLength);
+      amenitiesHilitesArray.push(amenitiesArray[indexToShow]);
+    }
+    setAmenitiesHilites(amenitiesHilitesArray);
+  }, [amenitiesExtras]);
+
 
   useEffect(() => {
     // eslint-disable-next-line no-undef
@@ -66,6 +84,8 @@ const useListing = () => {
     arrangements,
     amenitiesBasics,
     amenitiesExtras,
+    amenitiesHilites,
+    amenitiesNumber,
   };
 };
 
