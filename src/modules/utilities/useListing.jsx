@@ -15,7 +15,7 @@ const useListing = () => {
   const [arrangements, setArrangements] = useState([]);
   const [amenitiesBasics, setAmenitiesBasics] = useState([]);
   const [amenitiesExtras, setAmenitiesExtras] = useState(Object.create(null));
-  const [amenitiesHilites, setAmenitiesHilites] = useState();
+  const [amenitiesHilites, setAmenitiesHilites] = useState([]);
   const [amenitiesNumber, setAmenitiesNumber] = useState('');
 
   const fetchListing = async (listingNumber) => {
