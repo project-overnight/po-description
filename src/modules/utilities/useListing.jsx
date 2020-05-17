@@ -3,15 +3,15 @@ import { useState, useEffect } from 'react';
 const DISPLAYED = 4;
 
 const useListing = () => {
-  const [title, setTitle] = useState('');
-  const [maxGuests, setMaxGuests] = useState(0);
-  const [bedrooms, setBedrooms] = useState(0);
-  const [beds, setBeds] = useState(0);
-  const [baths, setBaths] = useState(0);
-  const [host, setHost] = useState('');
-  const [email, setEmail] = useState('');
-  const [description, setDescription] = useState('');
-  const [sizedDescription, setSizedDescription] = useState('');
+  const [title, setTitle] = useState('  ');
+  const [maxGuests, setMaxGuests] = useState('  ');
+  const [bedrooms, setBedrooms] = useState('  ');
+  const [beds, setBeds] = useState('  ');
+  const [baths, setBaths] = useState('  ');
+  const [host, setHost] = useState('  ');
+  const [email, setEmail] = useState('  ');
+  const [description, setDescription] = useState(' ');
+  const [sizedDescription, setSizedDescription] = useState(' ');
   const [arrangements, setArrangements] = useState([]);
   const [amenitiesBasics, setAmenitiesBasics] = useState([]);
   const [amenitiesExtras, setAmenitiesExtras] = useState(Object.create(null));
@@ -54,9 +54,14 @@ const useListing = () => {
     const descriptionArray = description.split(' ');
     let shortenDescription = '';
     for (let i = 0; i < 29; i += 1) {
-      shortenDescription += `${descriptionArray[i]} `;
+      if (descriptionArray[i] !== undefined) {
+        shortenDescription += `${descriptionArray[i]} `;
+      } else { shortenDescription += '      '; }
     }
-    shortenDescription += `${descriptionArray[30]}...`;
+    if (descriptionArray[30] !== undefined) {
+      shortenDescription += `${descriptionArray[30]}...`;
+    } else { shortenDescription += '      '; }
+
     setSizedDescription(shortenDescription);
   }, [description]);
 
