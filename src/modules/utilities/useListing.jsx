@@ -37,14 +37,15 @@ const useListing = () => {
   useEffect(() => {
     // this HOF puts the names of all the amenities in an array.
     const amenitiesArray = Object.values(amenitiesExtras).map((obj) => !null && obj.Amenity);
-    const amenitiesHilitesArray = [];
+    const amenitiesHilitesSet = new Set();
     const amenitesLength = amenitiesArray.length;
     setAmenitiesNumber(amenitesLength);
     for (let i = 0; i < DISPLAYED; i += 1) {
       // pick a random index
-      const indexToShow = Math.floor(Math.random() * amenitesLength);
-      amenitiesHilitesArray.push(amenitiesArray[indexToShow]);
+      const indexToShow = Math.floor(amenitesLength / (i + 1)) - 1;
+      amenitiesHilitesSet.add(amenitiesArray[indexToShow]);
     }
+    const amenitiesHilitesArray = Array.from(amenitiesHilitesSet);
     setAmenitiesHilites(amenitiesHilitesArray);
   }, [amenitiesExtras]);
 
