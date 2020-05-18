@@ -16,7 +16,6 @@ const SortedAmenitiesList = () => {
       sortedObject[extra.Category] = [];
     }
     sortedObject[extra.Category].push(extra.Amenity);
-    console.log(extra);
   });
 
   // eslint-disable-next-line consistent-return
