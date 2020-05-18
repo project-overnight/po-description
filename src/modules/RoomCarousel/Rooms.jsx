@@ -47,7 +47,9 @@ const Rooms = () => {
           <button
             type="button"
             onClick={() => setActive('next')}
-            className={(active + 3 === length ? styles.hideButton : styles.buttonNext)}
+            className={((active + 3 === length) || length < 4
+              ? styles.hideButton
+              : styles.buttonNext)}
           >
             ⇨
           </button>
