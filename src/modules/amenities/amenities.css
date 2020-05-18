@@ -22,6 +22,28 @@
   color: #008489;
   text-align: left;
 }
+.gridContainer {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.displayColumnDiv {
+  padding-left: 8px;
+  padding-right: 8px;
+  min-height: 1px;
+  position: relative;
+  width: 50%;
+  float: left;
+  }
+
+.displayCell{
+  width: 100%;
+  border-width: 0px;
+  line-height: 22px;
+  padding-bottom: 16px ;
+  justify-self: center;
+
+}
 .modalCloseButton{
   text-align: left;
   background: none;

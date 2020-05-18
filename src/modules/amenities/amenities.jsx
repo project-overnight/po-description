@@ -6,13 +6,30 @@ import useListing from '../utilities/useListing';
 
 
 const Amenities = () => {
-  const { amenitiesNumber } = useListing();
+  const { amenitiesNumber, amenitiesHilites } = useListing();
   return (
     <>
       <div className={styles.amenititesTitleStyling}>
         Amenities
       </div>
-      <div>4 things go here </div>
+      <div className={styles.gridContainer}>
+        <div className={styles.displayColumnDiv}>
+          <div className={styles.displayCell}>
+            {amenitiesHilites[0]}
+          </div>
+          <div className={styles.displayCell}>
+            {amenitiesHilites[1]}
+          </div>
+        </div>
+        <div className={styles.displayColumnDiv}>
+          <div className={styles.displayCell}>
+            {amenitiesHilites[2]}
+          </div>
+          <div className={styles.displayCell}>
+            {amenitiesHilites[3]}
+          </div>
+        </div>
+      </div>
       <AmenitiesModal>
         {({ modal, openModal, closeModal }) => (
           <>
