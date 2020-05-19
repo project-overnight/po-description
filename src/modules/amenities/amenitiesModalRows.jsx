@@ -8,8 +8,8 @@ const CategoryRow = ({ children }) => (
   </div>
 );
 
-const AmenityRow = ({ children, isIncluded }) => {
-  const styledAmmenity = isIncluded
+const AmenityRow = ({ children, isNotIncluded }) => {
+  const styledAmmenity = isNotIncluded
     ? (
       <span className={styles.amenitySpanStyle} style={{ textDecoration: 'line-through' }}>
         { children }

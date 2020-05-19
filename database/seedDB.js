@@ -9,14 +9,17 @@ mongoose.connect('mongodb://localhost:27017/po-description',
 const db = mongoose.connection;
 // eslint-disable-next-line no-console
 db.on('err', console.error.bind(console, 'connection error:'));
+
 db.once('open', () => {
-  PlaceDetail.insertMany(mockData)
-    .then((result) => {
+  db.dropCollection('placedetails')
+
+    .then(PlaceDetail.insertMany(mockData)
+      .then((result) => {
+        // eslint-disable-next-line no-console
+        console.log('db loaded', result.length);
+      })
       // eslint-disable-next-line no-console
-      console.log('db loaded', result.length);
-    })
-    // eslint-disable-next-line no-console
-    .catch((err) => { console.log('found err', err); })
+      .catch((err) => { console.log('found err', err); }))
     .finally(() => {
       db.close(() => {
         // eslint-disable-next-line no-console

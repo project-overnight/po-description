@@ -1,11 +1,13 @@
 import React from 'react';
 import { CategoryRow, AmenityRow } from './AmenitiesModalRows';
 import useListing from '../utilities/useListing';
+import useNotIncluded from '../utilities/useNotIncluded';
 import MarginDiv from '../utilities/MarginDiv';
 import styles from './AmenitiesModal.css';
 
 const SortedAmenitiesList = () => {
   const { amenitiesExtras } = useListing();
+  const { notIncluded } = useNotIncluded();
   const amenitiesExtrasArray = Object.values(amenitiesExtras);
   const sortedObject = {};
   amenitiesExtrasArray.forEach((extra) => {
@@ -14,7 +16,6 @@ const SortedAmenitiesList = () => {
       sortedObject[extra.Category] = [];
     }
     sortedObject[extra.Category].push(extra.Amenity);
-    console.log(extra);
   });
 
   // eslint-disable-next-line consistent-return
@@ -35,6 +36,28 @@ const SortedAmenitiesList = () => {
       );
     }
   };
+  const addNotIncludedAmenities = () => {
+    if (notIncluded.length > 0) {
+      return (
+        <>
+          <CategoryRow>Not included</CategoryRow>
+          <div className={styles.amenitiesRowDiv}>
+            {notIncluded.map((amenity, i) => (
+              <>
+                <AmenityRow
+                  key={amenity}
+                  isNotIncluded
+                >
+                  {amenity}
+                </AmenityRow>
+                { i < notIncluded.length - 1 && <MarginDiv /> }
+              </>
+            ))}
+          </div>
+        </>
+      );
+    } return <></>;
+  };
 
   return (
     <>
@@ -46,6 +69,7 @@ const SortedAmenitiesList = () => {
       {addCategoryAndAmenities('Logistics')}
       {addCategoryAndAmenities('Bed and Bath')}
       {addCategoryAndAmenities('Safety Features')}
+      {addNotIncludedAmenities()}
     </>
   );
 };
