@@ -8,6 +8,7 @@ import React from 'react';
 import useRoomCarousel from './useRoomCarousel';
 import MarginDiv from '../utilities/MarginDiv';
 import useListing from '../utilities/useListing';
+import { couch, bed } from '../utilities/icons';
 import styles from './RoomCarousel.css';
 
 
@@ -33,7 +34,7 @@ const Rooms = () => {
             <div className={styles.roomCarousel} style={reactStyle}>
               {arrangements.map(({ room, furniture }) => (
                 <div className={styles.roomCard} key={room}>
-                  <p className={styles.iconStyle}>bed</p>
+                  <p className={styles.iconStyle}>{ room === 'Common Spaces' ? couch : bed }</p>
                   <span className={styles.roomName}>{room}</span>
                   {furniture.map(({ count, type }) => (
                     <div key={type}>
