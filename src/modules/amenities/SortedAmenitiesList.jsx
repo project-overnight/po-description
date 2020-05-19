@@ -1,9 +1,9 @@
 import React from 'react';
-import { CategoryRow, AmenityRow } from './AmenitiesModalRows';
+import { CategoryRow, AmenityRow } from './amenitiesModalRows';
 import useListing from '../utilities/useListing';
 import useNotIncluded from '../utilities/useNotIncluded';
 import MarginDiv from '../utilities/MarginDiv';
-import styles from './AmenitiesModal.css';
+import styles from './amenitiesModal.css';
 
 const SortedAmenitiesList = () => {
   const { amenitiesExtras } = useListing();

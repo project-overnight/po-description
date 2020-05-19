@@ -1,6 +1,6 @@
 import React from 'react';
-import styles from './Amenities.css';
-import AmenitiesModal from './AmenitiesModal';
+import styles from './amenities.css';
+import AmenitiesModal from './amenitiesModal';
 import SortedAmenitiesList from './SortedAmenitiesList';
 import useListing from '../utilities/useListing';
 
