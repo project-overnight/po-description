@@ -7,13 +7,11 @@ import Amenities from './modules/amenities/amenities';
 
 const Listing = () => (
   <div className={styles.listingDiv}>
-    <div className={styles.listingWidthDiv}>
-      <Description />
-      <MarginDiv />
-      <Amenities />
-      <MarginDiv />
-      <Rooms />
-    </div>
+    <Description />
+    <MarginDiv />
+    <Amenities />
+    <MarginDiv />
+    <Rooms />
   </div>
 );
 
