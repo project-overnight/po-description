@@ -1,41 +1,46 @@
 import React from 'react';
 import styles from './Amenities.css';
-import Modal from './AmenitiesModal';
+import AmenitiesModal from './AmenitiesModal';
+import SortedAmenitiesList from './SortedAmenitiesList';
 
 const Amenities = () => (
   <>
-    <div className={styles.amentitesTitleStyling}>
+    <div className={styles.amenititesTitleStyling}>
       Amenities
     </div>
-    <Modal>
+    <div>4 things go here </div>
+    <AmenitiesModal>
       {({ modal, openModal, closeModal }) => (
         <>
-          <button
-            type="button"
-            onClick={openModal}
-          >
-            Show all ## Amenities
-          </button>
+          <div className={styles.amenitiesModalSpacingDiv}>
+            <button
+              className={styles.amenitiesModalOpenButton}
+              type="button"
+              onClick={openModal}
+            >
+              Show all ## Amenities
+            </button>
+          </div>
           { modal(
             <>
-              <div>
+              <div className={styles.modalCloseButtonSpacingDiv}>
                 <button
-                  type="button"
-                  onClick={closeModal}
                   className={styles.modalCloseButton}
+                  type="button"
+                  tabIndex={0}
+                  onClick={closeModal}
                 >
                   X
                 </button>
+
               </div>
-              <span>here </span>
+              <span className={styles.ammenitiesModalTitle}>Ammenities</span>
+              <SortedAmenitiesList />
             </>,
           ) }
         </>
       )}
-    </Modal>
-    <div>
-      bottom divider here
-    </div>
+    </AmenitiesModal>
   </>
 );
 

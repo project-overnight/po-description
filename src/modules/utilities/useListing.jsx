@@ -12,11 +12,12 @@ const useListing = () => {
   const [sizedDescription, setSizedDescription] = useState('');
   const [arrangements, setArrangements] = useState([]);
   const [amenitiesBasics, setAmenitiesBasics] = useState([]);
-  const [amenitiesExtras, setAmenitiesExtras] = useState();
+  const [amenitiesExtras, setAmenitiesExtras] = useState(Object.create(null));
 
   const fetchListing = async (listingNumber) => {
     let response = await fetch(`/api/description/${listingNumber}`);
     response = await response.json();
+    console.log(response.amenities.extras instanceof Object);
     setTitle(response.title);
     setMaxGuests(response.maxGuests);
     setBedrooms(response.bedrooms);
