@@ -2,7 +2,7 @@
 /* eslint-disable max-classes-per-file */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import styles from './AmenitiesModal.css';
+import styles from './amenitiesModal.css';
 
 
 // Modal using reactDom.portal

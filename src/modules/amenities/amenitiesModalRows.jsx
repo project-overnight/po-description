@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import styles from './AmenitiesModal.css';
+import styles from './amenitiesModal.css';
 
 const CategoryRow = ({ children }) => (
   <div className={styles.categoryRow}>

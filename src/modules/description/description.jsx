@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
-import styles from './Description.css';
-// import DescriptionClock from './DescriptionClock';
+import styles from './description.css';
 import useListing from '../utilities/useListing';
 
 // eslint-disable-next-line prefer-const
