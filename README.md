@@ -2,7 +2,7 @@
 
 ### All the information modules of a popular home sharing website, faithfully recreated.
 
-##Demo
+## Demo
 ![](./Demo.gif)
 
 
