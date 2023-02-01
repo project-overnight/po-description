@@ -16,7 +16,7 @@
   "dependencies": {
     "@babel/runtime": "^7.9.6",
     "express": "^4.17.1",
-    "mongoose": "^5.9.11",
+    "mongoose": "^5.13.15",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "webpack": "^4.43.0"
